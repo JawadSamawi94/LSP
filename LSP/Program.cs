@@ -19,6 +19,7 @@ namespace LSP {
             emp.LastName = "Lally";
             emp.CalculatePerHourRate(2);
 
+            //emp.AssignManager(accountingVP); // this can't happen 
             accountingVP.AssignManager(emp);
 
             Console.WriteLine($"{ emp.FirstName }'s salary is ${ emp.Salary }/hour.");

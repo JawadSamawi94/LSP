@@ -3,8 +3,15 @@ using System;
 
 namespace EmployeeLib
 {
-    public class Manager : Employee
+    public class Manager : Employee, ISuperVisor
     {
+        public IEmployee SuperVisor { get; set; }
+
+        public void AssignManager(IEmployee superVisor)
+        {
+            SuperVisor = superVisor;
+        }
+
         public override void CalculatePerHourRate(int rank)
         {
             decimal baseAmount = 19.75M;

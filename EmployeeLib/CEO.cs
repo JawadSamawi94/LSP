@@ -5,10 +5,16 @@ namespace EmployeeLib
 {
     public class CEO : Employee
     {
-
-        public override void AssignManager(IEmployee manager)
+        public override void CalculatePerHourRate(int rank)
         {
-            throw new InvalidOperationException("The CEO has no manager.");
+            decimal baseAmount = 150M;
+
+            Salary = baseAmount * rank;
+        }
+        public void FireSomeone()
+        {
+            // Simulate firing someone
+            Console.WriteLine("You're Fired!");
         }
     }
 }
