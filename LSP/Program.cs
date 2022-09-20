@@ -1,5 +1,6 @@
 ﻿using System;
 using EmployeeLib;
+using EmployeeLib.LSPModel;
 
 namespace LSP {
     internal class Program {
@@ -10,12 +11,15 @@ namespace LSP {
             accountingVP.LastName = "Stone";
             accountingVP.CalculatePerHourRate(4);
 
+            Console.WriteLine($"{ accountingVP.FirstName }'s salary is ${ accountingVP.Salary }/hour.");
+
             Employee emp = new CEO();
 
             emp.FirstName = "Tom";
             emp.LastName = "Lally";
-            emp.AssignManager(accountingVP);
             emp.CalculatePerHourRate(2);
+
+            accountingVP.AssignManager(emp);
 
             Console.WriteLine($"{ emp.FirstName }'s salary is ${ emp.Salary }/hour.");
 
