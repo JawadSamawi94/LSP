@@ -1,5 +1,4 @@
-﻿using EmployeeLib.LSPModel;
-using System;
+﻿using System;
 
 namespace EmployeeLib
 {
