@@ -15,5 +15,10 @@ namespace EmployeeLib
             // Simulate firing someone
             Console.WriteLine("You're Fired!");
         }
+        public void GeneratePerformanceReview()
+        {
+            // Simulate reviewing a direct report
+            Console.WriteLine("I'm reviewing a direct report's performance.");
+        }
     }
 }

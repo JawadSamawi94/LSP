@@ -2,11 +2,11 @@
 
 namespace EmployeeLib
 {
-    public class Manager : Employee, ISuperVisor
+    public class Manager : Employee, IManager<CEO>
     {
         public IEmployee SuperVisor { get; set; }
 
-        public void AssignManager(IEmployee superVisor)
+        public void AssignManager(CEO superVisor)
         {
             SuperVisor = superVisor;
         }

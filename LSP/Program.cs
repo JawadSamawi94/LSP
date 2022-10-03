@@ -13,7 +13,7 @@ namespace LSP {
 
             Console.WriteLine($"{ accountingVP.FirstName }'s salary is ${ accountingVP.Salary }/hour.");
 
-            Employee emp = new CEO();
+            CEO emp = new CEO();
 
             emp.FirstName = "Tom";
             emp.LastName = "Lally";
