@@ -1,20 +1,21 @@
-﻿using System;
+﻿using EmployeeLib.LSPModel;
 
 namespace EmployeeLib
 {
-    public class Manager : Employee
+    public class Manager : Employee, IManager<CEO>
     {
+        public CEO EmployeeManager { get; set; }
+
+        public void AssignManager(CEO employeeManager)
+        {
+            EmployeeManager = employeeManager;
+        }
+
         public override void CalculatePerHourRate(int rank)
         {
             decimal baseAmount = 19.75M;
 
             Salary = baseAmount + (rank * 4);
-        }
-
-        public void GeneratePerformanceReview()
-        {
-            // Simulate reviewing a direct report
-            Console.WriteLine("I'm reviewing a direct report's performance.");
         }
     }
 }

@@ -1,18 +1,13 @@
-﻿namespace EmployeeLib
+﻿using EmployeeLib.LSPModel;
+using System;
+
+namespace EmployeeLib
 {
-    public class Employee
+    public abstract class Employee : IEmployee, ISalaryCalculator
     {
         public string FirstName { get; set; }
         public string LastName { get; set; }
-        public Employee Manager { get; set; } = null;
         public decimal Salary { get; set; }
-
-        public virtual void AssignManager(Employee manager)
-        {
-            // Simulate doing other tasks here - otherwise, this should be
-            // a property set statement, not a method.
-            Manager = manager;
-        }
 
         public virtual void CalculatePerHourRate(int rank)
         {
@@ -20,5 +15,6 @@
 
             Salary = baseAmount + (rank * 2);
         }
+
     }
 }
