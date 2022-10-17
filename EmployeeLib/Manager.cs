@@ -4,11 +4,11 @@ namespace EmployeeLib
 {
     public class Manager : Employee, IManager<CEO>
     {
-        public IEmployee SuperVisor { get; set; }
+        public CEO EmployeeManager { get; set; }
 
-        public void AssignManager(CEO superVisor)
+        public void AssignManager(CEO employeeManager)
         {
-            SuperVisor = superVisor;
+            EmployeeManager = employeeManager;
         }
 
         public override void CalculatePerHourRate(int rank)
